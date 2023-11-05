@@ -1,38 +1,181 @@
+
 .App {
+  font-family: 'Arial', sans-serif;
   text-align: center;
+  background-color: #f7f7f7;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task-input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
+}
+
+.task-input input, .task-input textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-bottom: 2px solid #007bff;
+  font-size: 16px;
+  background-color: transparent;
+  transition: border-color 0.3s;
+}
+
+.task-input input::placeholder, .task-input textarea::placeholder {
+  color: #bbb;
+}
+
+.task-input input:focus, .task-input textarea:focus {
+  border-color: #ff5733;
+}
+
+.task-input button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.task-input button:hover {
+  background-color: #0056b3;
+}
+
+.filter-buttons {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.filter-buttons button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filter-buttons button:hover {
+  background-color: #0056b3;
 }
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.task-list li:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.task-list .status-pending {
+  background-color: #ffc107;
+}
+
+.task-list .status-in-progress {
+  background-color: #db3bab;
+  color: #fff;
+}
+
+.task-list .status-completed {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.task-list button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+.task-list button:hover {
+  background-color: #c82333;
+}
+
+.edit-task {
+  background-color: rgb(67, 9, 9)626;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.edit-task:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.edit-task h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.edit-task input, .edit-task textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-bottom: 2px solid #007bff;
+  font-size: 16px;
+  background-color: transparent;
+  transition: border-color 0.3s;
+}
+
+.edit-task input::placeholder, .edit-task textarea::placeholder {
+  color: #bbb;
+}
+
+.edit-task input:focus, .edit-task textarea:focus {
+  border-color: #ff5733;
+}
+
+.edit-task select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-bottom: 2px solid #007bff;
+  font-size: 16px;
+  background-color: transparent;
+  transition: border-color 0.3s;
+}
+
+
